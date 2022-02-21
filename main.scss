@@ -45,30 +45,22 @@ body {
         background-size: 90px;
         transform: skew(14deg) translateX(-16px);
       }
-    }
-  }
-}
 
-@for $i from 1 through 32 {
-  .container {
-    .heroes {
-      .hero {
-        &:nth-child(#{$i}) {
-          .image {
-            background-image: url("./images/hero#{$i}.png");
-          }
+      @for $i from 1 through 32 {
+        &:nth-child(#{$i}) .image {
+          background-image: url("./images/hero#{$i}.png");
         }
       }
     }
   }
-}
 
-.container .logo {
-  max-width: 300px;
-  margin: 0 auto;
-  padding: 0 20px;
+  .logo {
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 0 20px;
 
-  img {
-    width: 100%;
+    img {
+      width: 100%;
+    }
   }
 }
